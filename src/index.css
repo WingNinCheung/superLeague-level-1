@@ -1,1 +1,116 @@
-/* TODO Add site wide styles */
+body {
+  background-color: antiquewhite;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+#click-btn {
+  width: 5%;
+  height: 30px;
+  border-radius: 7px;
+  background-color: azure;
+  cursor: pointer;
+}
+
+#click-btn:hover {
+  background-color: aqua;
+}
+
+.click-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 6%;
+}
+
+#count-div,
+#table-title {
+  margin: 2%;
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#table-title {
+  text-decoration: underline;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 23%;
+  margin: 0 auto;
+}
+
+.table-main {
+  text-align: center;
+  margin-top: 5%;
+}
+
+th {
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.label {
+  text-align: left;
+}
+
+/* footer */
+.footer {
+  background-color: #608dc3;
+  color: white;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer a i {
+  font-size: 24px;
+}
+
+.name {
+  margin-left: 8%;
+  font-weight: bold;
+  margin-bottom: 8%;
+  font-family: sans-serif;
+  color: black;
+  font-size: 17px;
+}
+
+.footer a:hover {
+  color: lightgray;
+}
+
+.pic {
+  width: 5%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
