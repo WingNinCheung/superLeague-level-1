@@ -1,5 +1,21 @@
 import { useEffect, useState } from "react";
 import "./index.css";
+import { getDatabase, ref, set, onValue, off } from "firebase/database";
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: "level-1-14094.firebaseapp.com",
+  databaseURL: "https://level-1-14094-default-rtdb.firebaseio.com",
+  projectId: "level-1-14094",
+  storageBucket: "level-1-14094.appspot.com",
+  messagingSenderId: "277650364875",
+  appId: "1:277650364875:web:2c6aa02762f8db24f43e4e",
+  measurementId: "G-SH7GRB8ZZC",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
 function App() {
   // initialize the clickCount state
@@ -35,7 +51,7 @@ function App() {
             } else {
               newData[state] = 1;
             }
-            localStorage.setItem("stateClick", JSON.stringify(newData));
+            set(ref(db, "stateClick"), newData);
             return newData;
           });
         } else {
@@ -47,10 +63,19 @@ function App() {
     }
   };
 
-  // get the previous clickCount & stateClick from local storage upon refresh
+  // get the previous clickCount & stateClick from local storage and firebase upon refresh
   useEffect(() => {
     setClickCount(parseInt(localStorage.getItem("count")) || 0);
-    setStateClick(JSON.parse(localStorage.getItem("stateClick")) || {});
+
+    const stateClickRef = ref(db, "stateClick");
+    onValue(stateClickRef, (snapshot) => {
+      const count = snapshot.val() || {};
+      setStateClick(count);
+    });
+
+    return () => {
+      off(stateClickRef);
+    };
   }, []);
 
   return (
