@@ -10,6 +10,7 @@ It also shows on the web page the distribution of clicks by geography(U.S State)
 
 ## Technologies
 - React.js
+- Firebase Realtime Database
 - AWS Amplify
 
 ## How to Run
