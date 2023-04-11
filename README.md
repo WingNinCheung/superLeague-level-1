@@ -18,6 +18,11 @@ It also shows on the web page the distribution of clicks by geography(U.S State)
   ```
   git clone https://github.com/WingNinCheung/superLeague-level-1.git
   ```
+- Create your Firebase Realtime Database and .env file in the root directory
+  - on the .env file, paste your API key from Firebase
+  ```
+  REACT_APP_API_KEY=YOUR_KEY
+  ```
   
 - Install dependencies and Run
 
