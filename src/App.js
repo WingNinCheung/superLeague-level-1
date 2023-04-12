@@ -117,10 +117,7 @@ function App() {
           <a href="https://www.linkedin.com/in/wingnincheung/" target="popup">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a
-            href="https://github.com/WingNinCheung/superLeague-level-1"
-            target="popup"
-          >
+          <a href="https://github.com/WingNinCheung" target="popup">
             <i class="fa-brands fa-github"></i>
           </a>
           <a href="mailto:rickycheung.dev@gmail.com" className="a-links">
