@@ -4,8 +4,8 @@ body {
 }
 
 .main {
-  height: 100vh;
-  margin-bottom: 10vh;
+  min-height: 100vh;
+  margin-bottom: 15vh;
 }
 
 h1 {
@@ -85,10 +85,12 @@ tr:nth-child(even) {
   height: 10vh;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .footer a {
